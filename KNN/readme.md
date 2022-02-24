@@ -10,18 +10,7 @@ General instructions
 Background
 ----------------------------------------
 
-In this task, we will use three different functions to measure the
-distance of two points \$x\$, \$x\' \\in \\mathbb{R}\^n\$:
-
--   Euclidean distance: \$\$d(x, x\') = \\\|x-x\'\\\|\_2
-    =\\sqrt{\\sum\_{i=1}\^{n}\\big(x\_{i} - x\'\_{i}\\big)\^{2}}\$\$
--   Minkowski distance: \$\$ d(x, x\') = \\\|x-x\'\\\|\_3 =
-    \\bigg(\\sum\_{i=1}\^{n}\\big\|x\_{i} -
-    x\'\_{i}\\big\|\^{3}\\bigg)\^{1/3}\$\$
--   Cosine distance: \$\$d(x, x\') =\\begin{cases}1, &\\text{if
-    \$\\\|x\\\|\_2 = 0\$ or \$\\\|x\'\\\|\_2=0\$} \\\\ 1-\\frac{\\langle
-    x, x\'\\rangle}{\\\|x\\\|\_2\\\|x\'\\\|\_2}. &\\text{else}
-    \\end{cases}\$\$
+![](equation1.png)
 
 To measure the performance of the algorithm, we will use a widely-used
 metric called **F1-score** (instead of the \"error rate\" discussed in
