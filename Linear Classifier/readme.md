@@ -51,13 +51,13 @@ Below is the visualization of the first two datasets:
 Next, you need to implement multinomial logistic regression with either
 Gradient Descent or Stochastic Gradient Descent for a multiclass
 classification problem. Again, please note the following: first, the
-labels are indexed by \$0, 1, \\ldots, C-1\$; second, you need to
+labels are indexed by 0, 1, … , C−1; second, you need to
 explicitly learn the bias vector.
 
 In addition, please follow the following tip when implementing the
 softmax function (an essential part of the algorithm), to avoid
 numerical issues such as overflow and underflow caused by `np.exp`.
-Suppose the original input vector to the softmax function is \$z\$. In
+Suppose the original input vector to the softmax function is z. In
 the actual implementation, use vector hat(z) = z - max(z) as
 the input of the softmax function instead.
 
@@ -93,3 +93,5 @@ the numbers are not exactly the same but close enough).
 ![](multiclass.png)
 
 Below is the visualization of the first toy dataset:
+
+![](Toy_data_multiclass.png)
