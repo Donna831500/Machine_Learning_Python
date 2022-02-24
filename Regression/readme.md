@@ -8,8 +8,8 @@ General instructions
 
 ### Part 1.1 Mean Square Error
 
-Given a linear model parameter \$w\$ and a data set specified by \$X\$
-and \$y\$, compute the mean square error.
+Given a linear model parameter w and a data set specified by X
+and y, compute the mean square error.
 
 -   `TODO 1` Complete `def mean_square_error(w, X, y)` in
     `linear_regression.py`
@@ -17,8 +17,8 @@ and \$y\$, compute the mean square error.
 ### Part 1.2 Linear Regression
 
 Based on what we discussed in the lectures, implement linear regression
-with no regularization using a training data set \$(X,y)\$ and return
-the model parameter \$w\$. You do not need to worry about non-invertible
+with no regularization using a training data set (X,y) and return
+the model parameter w. You do not need to worry about non-invertible
 matrices for this part. You should use numpy inverse function directly
 (the whole implementation can in fact be as simple as one or two lines
 of code).
@@ -28,14 +28,14 @@ of code).
 
 Once you finish Part 1.1 and Part 1.2, you should be able to run
 `linear_regression_test.py` and test these two parts. Read the output,
-and check your dimension of \$w\$ (should be 12 in this case) and MSE
+and check your dimension of w (should be 12 in this case) and MSE
 for training, evaluation and testing datasets (should all be between
 0.5\~0.6).
 
 ### Part 1.3 Regularized Linear Regression
 
 To prevent overfitting, we now add L2 regularization with a
-regularization parameter \$\\lambda\$.
+regularization parameter λ.
 
 -   `TODO 3` Complete `def regularized_linear_regression(X, y, lambd)`
     in `linear_regression.py`
@@ -46,7 +46,7 @@ should see a better MSE for the test data.
 ### Part 1.4 Tune the regularization parameter
 
 Now try to tune the regularization parameter among the following 15
-values: \$2\^{-14}, 2\^{-13}, \\ldots, 2\^{-1}, 2\^{0}=1\$. More
+values: 2<sup>-14</sup>, 2\^{-13}, \\ldots, 2\^{-1}, 2\^{0}=1\$. More
 specifically, for each value, use the given training set and the
 `regularized_linear_regression` function you implemented in Part 1.3 to
 train a model, then use the given validation set and the
