@@ -50,10 +50,9 @@ two different data transformation approaches.
 
 #### Normalizing the feature vector
 
-This one is simple but sometimes may work well. Given a feature vector
-x, the normalized feature vector is given by \$ x\' =
-\\frac{x}{\\\|x\\\|\_2} \$. If a vector is an all-zero vector, we let
-the normalized vector to be itself.
+![](equation1.png)
+
+If a vector is an all-zero vector, we let the normalized vector to be itself.
 
 #### Min-max scaling for each feature
 
