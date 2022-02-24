@@ -71,27 +71,7 @@ one python function in `class dropout` to implement dropout.
 
 ### Q5. Mini-batch Stochastic Gradient Descent
 
-Next, implement a mini-batch version of stochastic gradient descent with
-momentum to learn the parameters of the neural net. Recall that for a
-general optimization problem with a parameter \$w\$, SGD with momentum
-iteratively computes the following\
-\$\$ \\begin{align} \\upsilon\_t = \\alpha \\upsilon\_{t-1} - \\eta
-g\_t\\\\ w\_t = w\_{t-1} + \\upsilon\_t \\end{align} \$\$\
-where \$\\alpha\$ is the momentum parameter, \$\\eta\$ is the step size,
-and \$g\_t\$ is the stochastic gradient (at \$w\_{t-1}\$). You need to
-complete
-`def miniBatchStochasticGradientDescent(model, momentum, _alpha, _learning_rate)`,
-where we update the parameters of each layer. Note that this function is
-executed after the backward pass of each layer has been called and thus
-the gradients have been stored properly. In fact, for each parameter, we
-have included the code to find its gradient, and you only need to do the
-following:
-
--   if \$\\alpha \\leq 0\$, implement one step of gradient descent
-    without momentum, with the given step size and gradient;
--   if \$\\alpha \> 0\$, implement one step of gradient descent with
-    momentum, with the given step size, momentum parameter, and
-    gradient.
+![](equation3.png)
 
 ### Q6. Connecting the dots
 
