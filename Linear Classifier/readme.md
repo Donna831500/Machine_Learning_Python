@@ -15,8 +15,8 @@ truly understand the algorithms discussed in the class, we intensionally
 introduce some extra complexity: first, the labels are either 0 or 1,
 instead of -1 or +1; second, the features do not contain the constant
 value 1, and you do need to explicitly learn a bias term (in other
-words, you are trying to learn a model \$ w\^\\top x + b \$, instead of
-just \$w\^\\top x\$). These extra complications are often met in
+words, you are trying to learn a model  w<sup>T</sup> x + b, instead of
+just w<sup>T</sup> x. These extra complications are often met in
 practice, and you need to think carefully before applying the formulas
 from the lectures.
 
