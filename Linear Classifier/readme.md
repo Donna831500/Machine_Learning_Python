@@ -58,12 +58,12 @@ In addition, please follow the following tip when implementing the
 softmax function (an essential part of the algorithm), to avoid
 numerical issues such as overflow and underflow caused by `np.exp`.
 Suppose the original input vector to the softmax function is \$z\$. In
-the actual implementation, use vector \$\\tilde{z} = z - \\max(z)\$ as
-the input of the softmax function instead. That is, if you want to
-compute \$\\frac{\\exp(z\_{i})}{\\sum\_{j=1}\^{D}\\exp(z\_{j})}\$,
-compute
-\$\\frac{\\exp(\\tilde{z}\_{i})}{\\sum\_{j=1}\^{D}\\exp(\\tilde{z}\_{j})}\$
-instead, which is clearly mathematically equivalent but numerically more
+the actual implementation, use vector hat(z) = z - max(z) as
+the input of the softmax function instead.
+
+![](equation1.png)
+
+which is clearly mathematically equivalent but numerically more
 stable.
 
 -   `TODO 5` In function `multiclass_train`, implement Stochastic
@@ -89,6 +89,7 @@ After you complete this part, run `multiclass.sh` to test your code,
 which produces a file `multiclass.out`. If your code is programmed
 correctly, you should see something similar to the below (it is okay if
 the numbers are not exactly the same but close enough).
-![](multiclass.png){width="400"}
+
+![](multiclass.png)
 
 Below is the visualization of the first toy dataset:
