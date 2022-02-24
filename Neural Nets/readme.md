@@ -11,43 +11,16 @@ Neural Networks
 
 ![](MLP_diagram.png)
 
-In this task, you are asked to implement neural networks. You will use
-this neural network to classify MNIST database of handwritten digits
-(0-9). The architecture of the neural network you will implement is
-based on the multi-layer perceptron (MLP, just another term for fully
-connected feedforward networks we discussed in the lecture), which is
-shown in Figure 1. It is designed for a K-class classification problem.
-Let \$(x\\in\\mathbb{R}\^D, y\\in\\{1,2,\\cdots,K\\})\$ be a labeled
-instance, such an MLP performs the following computations:\
-\
-\$\$ \\begin{align} \\textbf{input features}: \\hspace{15pt} & x \\in
-\\mathbb{R}\^D \\\\ \\textbf{linear}\^{(1)}: \\hspace{15pt} & u =
-W\^{(1)}x + b\^{(1)} \\hspace{2em}, W\^{(1)} \\in \\mathbb{R}\^{M\\times
-D} \\text{ and } b\^{(1)} \\in \\mathbb{R}\^{M}
-\\label{linear\_forward}\\\\ \\textbf{tanh}:\\hspace{15pt} & h
-=\\cfrac{2}{1+e\^{-2u}}-1 \\label{tanh\_forward}\\\\ \\textbf{relu}:
-\\hspace{15pt} & h = \\max\\{0, u\\} = \\begin{bmatrix} \\max\\{0,
-u\_1\\}\\\\ \\vdots \\\\ \\max\\{0, u\_M\\}\\\\ \\end{bmatrix}
-\\label{relu\_forward}\\\\ \\textbf{linear}\^{(2)}: \\hspace{15pt} & a =
-W\^{(2)}h + b\^{(2)} \\hspace{2em}, W\^{(2)} \\in \\mathbb{R}\^{K\\times
-M} \\text{ and } b\^{(2)} \\in \\mathbb{R}\^{K}
-\\label{linear2\_forward}\\\\ \\textbf{softmax}: \\hspace{15pt} & z =
-\\begin{bmatrix} \\cfrac{e\^{a\_1}}{\\sum\_{k} e\^{a\_{k}}}\\\\ \\vdots
-\\\\ \\cfrac{e\^{a\_K}}{\\sum\_{k} e\^{a\_{k}}} \\\\ \\end{bmatrix}\\\\
-\\textbf{predicted label}: \\hspace{15pt} & \\hat{y} =
-\\mathrm{argmax}\_k z\_k. %& l = -\\sum\_{k} y\_{k}\\log{\\hat{y\_{k}}}
-\\hspace{2em}, \\vy \\in \\mathbb{R}\^{k} \\text{ and } y\_k=1 \\text{
-if } \\vx \\text{ belongs to the } k\' \\text{-th class}. \\end{align}
-\$\$
+![](equation1.png)
 
 ### Q1. Linear Layer
 
 First, you need to implement the linear layer of an MLP by implementing
 3 python functions in `class linear_layer`. This layer has two
-parameters \$W\$ and \$b\$.
+parameters W and b.
 
 -   In the function `def __init__(self, input_D, output_D)`, you need to
-    randomly initialize the entries of \$W\$ and \$b\$ with mean 0 and
+    randomly initialize the entries of W and b with mean 0 and
     standard deviation 0.1 using np.random.normal. You also need to
     initialize the gradients to zeroes in the same function.
 
@@ -59,8 +32,8 @@ parameters \$W\$ and \$b\$.
 -   In `def backward(self, X, grad)`, implement the backward pass of
     this layer. Here, grad is the gradient with respect to the output of
     this layer, and you need to find and store the gradients with
-    respect to \$W\$ and \$b\$, and also find and return the gradients
-    with respect to the input \$X\$ of this layer.
+    respect to W and b, and also find and return the gradients
+    with respect to the input X of this layer.
 
 ### Q2. Activation function - RELU
 
@@ -94,34 +67,7 @@ to be learned in this module.
 Dropout is one effective way to prevent overfitting. You will implement
 one python function in `class dropout` to implement dropout.
 
--   In `def forward(self, X, is_train)`, we have implemented the forward
-    pass of dropout when is\_train is true (since we do not perform
-    dropout in testing). It executes the following operation:
-    \\begin{align} \\text{forward pass:}\\hspace{2em} & {s} =
-    \\text{dropout}\\text{.forward}({q}\\in\\mathbb{R}\^J) =
-    \\frac{1}{1-r}\\times \\begin{bmatrix} \\textbf{1}\[p\_1 \>= r\]
-    \\times q\_1\\\\ \\vdots \\\\ \\textbf{1}\[p\_J \>= r\] \\times
-    q\_J\\\\ \\end{bmatrix}, \\\\ \\nonumber\\\\ &\\text{where } p\_j
-    \\text{ is generated randomly from }\[0, 1), \\forall
-    j\\in\\{1,\\cdots,J\\}, \\nonumber\\\\ &\\text{and } r\\in \[0, 1)
-    \\text{ is a pre-defined scalar named dropout rate which is given to
-    you}. \\\\ \\end{align}
-
-    You only need to read and understand the code here (i.e, nothing for
-    you to implement).
-
--   In `def backward(self, X, grad)`, implement the backward pass of
-    dropout, which performs the following operation: \\begin{align}
-    \\text{backward pass:}\\hspace{2em} &\\frac{\\partial l}{\\partial
-    {q}} = \\text{dropout}\\text{.backward}({q}, \\frac{\\partial
-    l}{\\partial {s}})= \\frac{1}{1-r}\\times \\begin{bmatrix}
-    \\textbf{1}\[p\_1 \>= r\] \\times \\cfrac{\\partial l}{\\partial
-    s\_1}\\\\ \\vdots \\\\ \\textbf{1}\[p\_J \>= r\] \\times
-    \\cfrac{\\partial l}{\\partial s\_J}\\\\ \\end{bmatrix}.
-    \\end{align}
-
-    Note that \$p\_1, \\ldots, p\_J\$ should not be sampled randomly
-    again but take the same values as in the forward pass.
+![](equation2.png)
 
 ### Q5. Mini-batch Stochastic Gradient Descent
 
