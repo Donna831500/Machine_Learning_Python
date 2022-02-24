@@ -1,8 +1,7 @@
-::: {.stackedit__html}
-K-means Clustering (50 points) {#general-instructions}
+K-means Clustering
 ==============================
 
-General instructions {#Instructions}
+General instructions
 --------------------
 
 -   In this task you will implement the **K-means** algorithm and its
@@ -36,7 +35,7 @@ library named \"pillow\", which is used by matplotlib to process some of
 the images needed for this assignment. You can install it by running
 \"pip3 install pillow\" in your command line.
 
-Q1. K-means++ initialization {#k-means-clustering}
+Q1. K-means++ initialization
 ----------------------------
 
 K-means++ generally performs much better than the vanilla K-means
@@ -46,7 +45,7 @@ initialization in function `get_k_means_plus_plus_center_indices`. (Note
 that we also provide the vanilla initialization method in
 `get_lloyd_k_means`.)
 
-Q2. K-means algorithm {#k-means-clustering}
+Q2. K-means algorithm
 ---------------------
 
 Recall that for a dataset
@@ -215,7 +214,7 @@ fine).
 
 ![](clusters.png)
 
-Q3 Classification with K-means {#classification-with-k-means}
+Q3 Classification with K-means
 ------------------------------
 
 Another application of clustering is to obtain a faster version of the
@@ -238,7 +237,7 @@ a test set (digits). For comparison, the script will also print accuracy
 of a logistic classifier and a vanilla nearest neighbor classifier. An
 example is shown below. ![](classification_output.png)
 
-Q4 Image compression with K-means {#image-compression-with-k-means}
+Q4 Image compression with K-means
 ---------------------------------
 
 In this part, we will take lossy image compression as another
@@ -256,14 +255,3 @@ that this image is slightly distorted as compared to the original
 baboon.tiff. The ideal result should take about 35-40 iterations and the
 Mean Square Error (between the two images) should be less than 0.0098.
 It takes about 1-2 minutes to complete normally.
-
-Grading Guidelines: {#grading-guidelines-50-points}
--------------------
-
--   get\_k\_means\_plus\_plus\_center\_indices - 5 points (5 test cases)
--   Kmeans class - 15 points (5 test cases)
--   KmeansClassifier class - 20 points (4 test cases)
--   transform\_image - 10 points (2 test cases)
-
-Note: it takes a few minutes for the grading to finish.
-:::
