@@ -38,7 +38,7 @@ After you finish this part, you can run `binary.sh` to test your code,
 which produces a file `binary.out`. If your code is programmed
 correctly, you should see something similar to the below (it is okay if
 the numbers are not exactly the same but close enough).
-![](binary.png){width="400"}
+![](binary.png)
 
 Below is the visualization of the first two datasets:
 
@@ -91,26 +91,3 @@ the numbers are not exactly the same but close enough).
 ![](multiclass.png){width="400"}
 
 Below is the visualization of the first toy dataset:
-
-### Grading guideline[¶](#Grading){.anchor-link} {#Grading}
-
--   Sigmoid function - 4 points
-
--   Binary classification - 24 points (4 test cases)
-
--   Multiclass classification - 32 points (4 test cases)
-
-Note that the first test case for binary classification is the Two Moon
-Dataset you can play with when running `binary.sh`. To help you debug
-your code, in the grading report we have included the expected outputs
-for this test case.
-
-Another important note: if your code takes too long to run, Vocareum
-will kill the process automatically. You are responsible to make sure
-that your code can be graded successfully on Vocareum. As a reference,
-it takes less than one minute for our solution code to be graded.
-:::
-:::
-:::
-:::
-:::
