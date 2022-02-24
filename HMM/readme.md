@@ -1,27 +1,14 @@
-::: {.stackedit__html}
-Hidden Markov Models (50 points)
+
+Hidden Markov Models
 ================================
 
-General instructions {#Instructions}
+General instructions
 --------------------
 
 -   In this task you will implement various inference algorithms for
-    **HMM** and also apply them to sentence tagging. We provide the
-    bootstrap code and you are expected to complete the functions.
--   Do not import libraries other than those already imported in the
-    original code.
--   Please follow the type annotations. You have to make the function's
-    return values match the required type.
--   Only modifications in files {`hmm.py`, `tagger.py`} in the \"work\"
-    directory will be accepted and graded. All other modifications will
-    be ignored. You can work directly on Vocareum, or download all files
-    from \"work\", code in your own workspace, and then upload the
-    changes (recommended).
--   Click the Submit button when you are ready to submit your code for
-    auto-grading. Your final grade is determined by your **last**
-    submission.
+    **HMM** and also apply them to sentence tagging.
 
-Q1 Implement the inference algorithms {#implementation-30-points}
+Q1 Implement the inference algorithms
 -------------------------------------
 
 In `hmm.py`, you will find a class called HMM whose attributes specify
@@ -47,7 +34,7 @@ and the formulas we discussed (the former starts from 0 and the latter
 starts from 1). Read the comments in the code carefully to get a better
 sense of this discrepancy.
 
-Q2 Application to speech tagging {#application-to-speech-tagging--20-points}
+Q2 Application to speech tagging
 --------------------------------
 
 Part-of-Speech (POS) is a category of words (or, more generally, of
@@ -80,53 +67,8 @@ and the `speech_tagging` function in `tagger.py`.
     the probability of seeing this new word under any state is 1e-6.
     Again, read the comments in the code for more instructions.
 
-Q3 Testing {#grading-guideline}
+Q3 Testing
 ----------
 
-Once you finish these two parts, run `hmm_test_script.py`. We will first
-run all your inference algorithms on a toy HMM model specified in
-`hmm_model.json`, and then also your tagging code on the dataset stored
-in `pos_sentences.txt` and `pos_tags.txt`. In both cases, the script
-tells you what your outputs vs. the correct outputs are.
-
-Grading guideline
------------------
-
-1 Inference algorithms (30 points)
-
-1.  `forward` function - 5 = 5x1 points
-2.  `backward` function - 5 = 5x1 points
-3.  `sequence_prob` function - 2.5 = 5x0.5 points
-4.  `posterior_prob` function - 5 = 5x1 points
-5.  `likelihood_prob` function - 5 = 5x1 points
-6.  `viterbi` function - 7.5 = 5\*1.5 points
-
-There are 5 sets of grading data used to initialize the HMM class and
-test your functions. To receive full credits, your output of functions
-1-5 should be within an error of 1e-6, and your output of the viterbi
-function should be identical with ours.
-
-2 Application to Part-of-Speech Tagging (20 points)
-
-1.  `model_training` - 10 =
-    10x(your\_correct\_pred\_cnt/our\_correct\_pred\_cnt)
-2.  `speech_tagging` - 10 =
-    10x(your\_correct\_pred\_cnt/our\_correct\_pred\_cnt)
-
-We will use the dataset given to you for grading this part (with a
-different random seed). We will train your model and our model on same
-train\_data. `model_training` function and `speech_tagging` function
-will be tested separately.
-
-In order to check your model\_training function, we will use 50
-sentences from `train_data` to do Part-of-Speech Tagging (your model +
-our tagging function vs. our model + our tagging function). To receive
-full credits, your prediction accuracy should be identical or better
-than ours.
-
-In order to check your `speech_tagging` function, we will use 50
-sentences from `test_data` to do Part-of-Speech Tagging (your model +
-your tagging function vs. our model + our tagging function). Again, to
-receive full credits, your prediction accuracy should be identical or
-better than ours.
-:::
+Once you finish these two parts, run `hmm_test_script.py`. You will see the function output,
+accuracy, and time consuming.
