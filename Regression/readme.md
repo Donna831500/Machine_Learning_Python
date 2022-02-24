@@ -46,7 +46,7 @@ should see a better MSE for the test data.
 ### Part 1.4 Tune the regularization parameter
 
 Now try to tune the regularization parameter among the following 15
-values: 2<sup>-14</sup>, 2\^{-13}, \\ldots, 2\^{-1}, 2\^{0}=1\$. More
+values: 2<sup>-14</sup>, 2<sup>-13</sup>, ... , 2<sup>-1</sup>, 2<sup>0</sup> = 1. More
 specifically, for each value, use the given training set and the
 `regularized_linear_regression` function you implemented in Part 1.3 to
 train a model, then use the given validation set and the
