@@ -50,7 +50,7 @@ two different data transformation approaches.
 
 #### Normalizing the feature vector
 
-![](equation1.png)
+![](equation2.png)
 
 If a vector is an all-zero vector, we let the normalized vector to be itself.
 
