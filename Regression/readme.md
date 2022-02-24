@@ -67,9 +67,9 @@ one-dimensional case. Here, you will implement a simplified version of
 the polynomial regression for high-dimensional data, by only raising
 each feature to some power and ignoring \"crossed\" features. For
 example, if we have a two-dimensional feature (x<sub>1</sub>, x<sub>2</sub>), then for
-a 2-degree polynomial regression, we will map this feature to \$(x<sub>1</sub>,
-x<sub>2</sub>, x<sub>1</sub><sup>2</sup>, x<sub>2</sub><sup>2</sup>)\$ (note that there is no \"crossed\" feature
-x<sub>1</sub>x<sub>2</sub).
+a 2-degree polynomial regression, we will map this feature to (x<sub>1</sub>,
+x<sub>2</sub>, x<sub>1</sub><sup>2</sup>, x<sub>2</sub><sup>2</sup>) (note that there is no \"crossed\" feature
+x<sub>1</sub>x<sub>2</sub>).
 
 To reuse previous code for linear regression, you task is simply to take
 a dataset X and an integer p, and return the augmented data set
