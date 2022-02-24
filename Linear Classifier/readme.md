@@ -38,12 +38,13 @@ After you finish this part, you can run `binary.sh` to test your code,
 which produces a file `binary.out`. If your code is programmed
 correctly, you should see something similar to the below (it is okay if
 the numbers are not exactly the same but close enough).
+
 ![](binary.png)
 
 Below is the visualization of the first two datasets:
 
--   Synthetic data: ![](Synthetic_data.png){width="400"}
--   Two Moon data: ![](Two_Moon_data.png){width="400"}
+-   Synthetic data: ![](Synthetic_data.png)
+-   Two Moon data: ![](Two_Moon_data.png)
 
 ### Part 2. Multiclass classification - SGD vs. GD
 
