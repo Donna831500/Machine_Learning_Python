@@ -58,7 +58,7 @@ lowest mean square error.
     `linear_regression.py`
 
 Once you finish this part, run linear\_regression\_test.py again. The
-best lambda happens to be \$2\^{-14}\$ in this case.
+best lambda happens to be 2<sup>-14</sup> in this case.
 
 ### Part 1.5 Polynomial regression
 
@@ -66,14 +66,14 @@ In the lectures, we discussed polynomial regression for the
 one-dimensional case. Here, you will implement a simplified version of
 the polynomial regression for high-dimensional data, by only raising
 each feature to some power and ignoring \"crossed\" features. For
-example, if we have a two-dimensional feature \$(x\_1, x\_2)\$, then for
-a 2-degree polynomial regression, we will map this feature to \$(x\_1,
-x\_2, x\_1\^2, x\_2\^2)\$ (note that there is no \"crossed\" feature
-\$x\_1x\_2\$).
+example, if we have a two-dimensional feature (x<sub>1</sub>, x<sub>2</sub>), then for
+a 2-degree polynomial regression, we will map this feature to \$(x<sub>1</sub>,
+x<sub>2</sub>, x<sub>1</sub><sup>2</sup>, x<sub>2</sub><sup>2</sup>)\$ (note that there is no \"crossed\" feature
+x<sub>1</sub>x<sub>2</sub).
 
 To reuse previous code for linear regression, you task is simply to take
-a dataset \$X\$ and an integer \$p\$, and return the augmented data set
-\$\[X, X\^2, \\ldots, X\^p\]\$ where \$X\^i\$ stands for element-wise
+a dataset X and an integer p, and return the augmented data set
+[X, X<sup>2</sup>, ... , X<sup>p</sup>] where X<sup>i</sup> stands for element-wise
 power.
 
 -   `TODO 5` Complete `def mapping_data(X, power)` in
